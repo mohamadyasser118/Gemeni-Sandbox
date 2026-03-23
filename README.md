@@ -12,6 +12,34 @@ A Python-based autonomous AI agent powered by Google's Gemini API that performs 
 - Integrating LLM function calling with custom tools
 - Building sandbox patterns for safe code execution
 
+### Architecture Visualization
+
+```
+┌─────────────────────────────────────┐
+│   GEMINI SANDBOX                    │
+├─────────────────────────────────────┤
+│                                     │
+│  ┌─────────────┐                    │
+│  │   Gemini    │ (AI Brain)         │
+│  │   API       │                    │
+│  └──────┬──────┘                    │
+│         │ asks questions            │
+│         ▼                           │
+│  ┌─────────────────────────┐        │
+│  │    SANDBOX (isolated)   │        │
+│  │  ┌─────────────────┐    │        │
+│  │  │ Run Python code │    │        │
+│  │  │ Read/Write files│    │        │
+│  │  │ (but safely)    │    │        │
+│  │  └─────────────────┘    │        │
+│  │  ✅ Limits:             │        │
+│  │  - Can't escape folder  │        │
+│  │  - 10K char file limit  │        │
+│  │  - 30 second timeout    │        │
+│  └─────────────────────────┘        │
+└─────────────────────────────────────┘
+```
+
 ## ✨ Features
 
 ### 🔒 Sandbox-Protected Operations
