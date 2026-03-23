@@ -210,20 +210,6 @@ This project intentionally demonstrates:
 - ✅ The importance of defense-in-depth
 - ⚠️ **NOT suitable for untrusted code execution** (for education only)
 
-## 📝 Contributing
-
-This is a learning project, but contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## 📄 License
-
-MIT License - See [LICENSE](LICENSE) file for details.
-
-This means you can:
-- ✅ Use this for learning
-- ✅ Modify and experiment
-- ✅ Share with others
-- ✅ Include in your portfolio
-
 ## 🤔 FAQ
 
 **Q: Is this production-ready?**
@@ -243,7 +229,3 @@ A: It stops after 20 iterations by default. You can reduce this in `config.py`.
 - [Google Gemini API Docs](https://ai.google.dev/docs)
 - [Python Function Calling](https://ai.google.dev/docs/function_calling)
 - [Security in Python](https://python.readthedocs.io/en/stable/library/security_warnings.html)
-
-## 📧 Support
-
-For questions or issues, see [GITHUB_UPLOAD_GUIDE.md](GITHUB_UPLOAD_GUIDE.md) for setup help.
