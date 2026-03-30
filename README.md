@@ -1,6 +1,6 @@
 # AI Agent with Sandbox-Protected File Operations
 
-> **📚 Learning Project** — This is an educational project designed to demonstrate autonomous AI agent patterns, secure file operations, and LLM function calling. Not intended for production use.
+> This is an educational project designed to demonstrate autonomous AI agent patterns, secure file operations, and LLM function calling. Not intended for production use.
 
 ## Overview
 
@@ -32,7 +32,7 @@ A Python-based autonomous AI agent powered by Google's Gemini API that performs 
 │  │  │ Read/Write files│    │        │
 │  │  │ (but safely)    │    │        │
 │  │  └─────────────────┘    │        │
-│  │  ✅ Limits:             │        │
+│  │     Limits:             │        │
 │  │  - Can't escape folder  │        │
 │  │  - 10K char file limit  │        │
 │  │  - 30 second timeout    │        │
@@ -40,27 +40,27 @@ A Python-based autonomous AI agent powered by Google's Gemini API that performs 
 └─────────────────────────────────────┘
 ```
 
-## ✨ Features
+## Features
 
-### 🔒 Sandbox-Protected Operations
+### Sandbox-Protected Operations
 - **`get_files_info`** — List directory contents with metadata (recursively)
 - **`get_file_content`** — Read file contents with character limits and truncation detection
 - **`write_file`** — Create/overwrite files with automatic directory creation
 - **`run_python_file`** — Execute Python scripts safely with timeout protection
 
-### 🤖 Autonomous AI Capabilities
+### Autonomous AI Capabilities
 - **20-iteration agentic loop** — Agent independently plans and executes multi-step tasks
 - **Conversation history** — Persistent context across iterations
 - **Function calling** — LLM seamlessly invokes tools and interprets results
 - **Error handling** — Graceful failures with clear feedback to the agent
 
-### 🛡️ Security Model
+### Security Model
 - **Path validation** — Prevents directory traversal attacks
 - **Character limits** — Restricts file read size (10K chars max)
 - **Subprocess timeout** — Prevents infinite execution (30 second limit)
 - **Sandboxed working directory** — All operations confined to `./calculator`
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.10+
@@ -113,7 +113,7 @@ uv run main.py "Create a new Python file with a function that calculates factori
 uv run main.py "your task here" --verbose
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AI-Agent/
@@ -143,7 +143,7 @@ AI-Agent/
 └── README.md                  # This file
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ### Agentic Loop Pattern
 ```
@@ -166,7 +166,7 @@ Final Response
 3. **Resource Limits** — Character limits (10K), timeout limits (30s)
 4. **Working Directory Isolation** — All operations confined to `./calculator`
 
-## 🧪 Testing
+## Testing
 
 Run the test suite:
 ```bash
@@ -186,7 +186,7 @@ uv run test_run_python_file.py
 cd calculator && python tests.py
 ```
 
-## 🔧 Configuration
+## Configuration
 
 Edit `config.py` to adjust:
 ```python
@@ -195,7 +195,7 @@ MAX_ITERATIONS = 20      # Maximum agentic loop iterations
 TIMEOUT = 30             # Subprocess timeout in seconds
 ```
 
-## 📚 Learning Resources
+## Learning Resources
 
 ### What This Project Teaches
 
@@ -217,7 +217,7 @@ TIMEOUT = 30             # Subprocess timeout in seconds
 - Type hints and validation
 - Argument parsing with `argparse`
 
-## 🎯 Example Walkthrough
+## Example Walkthrough
 
 **Task:** "Debug the calculator's operator precedence bug"
 
@@ -228,17 +228,17 @@ TIMEOUT = 30             # Subprocess timeout in seconds
 4. **Iteration 4:** Fixes the bug by reordering operations
 5. **Iteration 5:** Verifies fix by running tests
 
-Result: ✅ Bug fixed in 5 iterations without human intervention
+Result: Bug fixed in 5 iterations without human intervention
 
-## 🚫 Security Concerns (Learning Focus)
+## Security Concerns (Learning Focus)
 
 This project intentionally demonstrates:
-- ✅ What NOT to do in production (sandbox for learning, not security guarantee)
-- ✅ How to add guardrails incrementally
-- ✅ The importance of defense-in-depth
-- ⚠️ **NOT suitable for untrusted code execution** (for education only)
+- What NOT to do in production (sandbox for learning, not security guarantee)
+- How to add guardrails incrementally
+- The importance of defense-in-depth
+- **NOT suitable for untrusted code execution** (for education only)
 
-## 🤔 FAQ
+## FAQ
 
 **Q: Is this production-ready?**
 A: No. It's educational. For production, you'd need additional security hardening, monitoring, and compliance features.
